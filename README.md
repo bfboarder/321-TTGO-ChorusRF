@@ -1,4 +1,4 @@
-# Chorus32-ESP32Laptimer
+# Chorus32-ESP32Laptimer.
 
 This is an ESP32 port of the popular Chorus RF laptimer (https://github.com/voroshkov/Chorus-RF-Laptimer). Using an ESP32 provides much more processing power than AVR based Arduino boards and also has built in Wifi and Bluetooth networking simplifying connectivity options.
 
