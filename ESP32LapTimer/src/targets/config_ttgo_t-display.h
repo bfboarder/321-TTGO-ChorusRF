@@ -15,21 +15,24 @@
  * You should have received a copy of the GNU General Public License
  * along with this program. If not, see <http://www.gnu.org/licenses/>.
  */
-#define BEEPER 14
+#define BEEPER -1
 
-#define LEDs 2
+#define LEDs -1
 
-#define USE_CLASSIC_BUTTONS
+#define USE_NORMAL_BUTTONS
   
-#define BUTTON1 13
-#define BUTTON2 12
+#define BUTTON1 35
+#define BUTTON2 0
 
-#define CS1 16
-#define CS2 5
-#define CS3 4
-#define CS4 15
-#define CS5 25
-#define CS6 26
+#define VRX_SCK 25
+#define VRX_MOSI 27
+
+#define CS1 33
+#define CS2 -1
+#define CS3 -1
+#define CS4 -1
+#define CS5 -1
+#define CS6 -1
 
 #define ADC1 ADC1_CHANNEL_0
 #define ADC2 ADC1_CHANNEL_3
@@ -39,8 +42,8 @@
 #define ADC6 ADC1_CHANNEL_7 // switched with adc 4 due to xtal
 
 #define ADC1_GPIO 36
-#define ADC2_GPIO 39
-#define ADC3_GPIO 34
-#define ADC4_GPIO 33
-#define ADC5_GPIO 32
-#define ADC6_GPIO 35
+#define ADC2_GPIO -1
+#define ADC3_GPIO -1
+#define ADC4_GPIO -1
+#define ADC5_GPIO -1
+#define ADC6_GPIO -1
