@@ -28,11 +28,11 @@
 #define VRX_MOSI 27
 
 #define CS1 33
-#define CS2 -1
-#define CS3 -1
-#define CS4 -1
-#define CS5 -1
-#define CS6 -1
+#define CS2 99
+#define CS3 99
+#define CS4 99
+#define CS5 99
+#define CS6 99
 
 #define ADC1 ADC1_CHANNEL_0
 #define ADC2 ADC1_CHANNEL_3
@@ -42,8 +42,8 @@
 #define ADC6 ADC1_CHANNEL_7 // switched with adc 4 due to xtal
 
 #define ADC1_GPIO 36
-#define ADC2_GPIO -1
-#define ADC3_GPIO -1
-#define ADC4_GPIO -1
-#define ADC5_GPIO -1
-#define ADC6_GPIO -1
+#define ADC2_GPIO 98
+#define ADC3_GPIO 98
+#define ADC4_GPIO 98
+#define ADC5_GPIO 98
+#define ADC6_GPIO 98
