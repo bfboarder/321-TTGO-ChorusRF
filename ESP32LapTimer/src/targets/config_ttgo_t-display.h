@@ -19,10 +19,10 @@
 
 #define LEDs -1
 
-#define USE_NORMAL_BUTTONS
+//#define USE_NORMAL_BUTTONS
   
-#define BUTTON1 35
-#define BUTTON2 0
+//#define BUTTON1 35
+//#define BUTTON2 0
 
 #define VRX_SCK 25
 #define VRX_MOSI 27

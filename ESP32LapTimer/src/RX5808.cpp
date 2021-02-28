@@ -41,7 +41,7 @@ static volatile uint8_t RXChannel[MAX_NUM_RECEIVERS];
 
 void InitSPI() {
   SPI.begin(VRX_SCK, VRX_MISO, VRX_MOSI);
-  delay(5);
+  delay(200);
 }
 
 void rxWrite(uint8_t addressBits, uint32_t dataBits, uint8_t CSpin) {
@@ -55,6 +55,7 @@ void rxWrite(uint8_t addressBits, uint32_t dataBits, uint8_t CSpin) {
   digitalWrite(CSpin, HIGH);
   delayMicroseconds(MIN_TUNE_TIME);
   SPI.endTransaction();
+    delay(5);
 
 }
 
@@ -82,6 +83,7 @@ void rxWriteAll(uint8_t addressBits, uint32_t dataBits) {
   delayMicroseconds(MIN_TUNE_TIME);
 
   SPI.endTransaction();
+    delay(5);
 
 }
 
