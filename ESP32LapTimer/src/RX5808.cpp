@@ -50,14 +50,13 @@ void rxWrite(uint8_t addressBits, uint32_t dataBits, uint8_t CSpin) {
   uint32_t data = addressBits | (1 << 4) | (dataBits << 5);
   RXSPI.beginTransaction(SPISettings(20000000, LSBFIRST, SPI_MODE0));
   digitalWrite(CSpin, LOW);
-    delay(5);
+    
   RXSPI.transferBits(data, NULL, 25);
 
   digitalWrite(CSpin, HIGH);
   delayMicroseconds(MIN_TUNE_TIME);
   RXSPI.endTransaction();
-    delay(5);
-
+    
 }
 
 void rxWriteNode(uint8_t node, uint8_t addressBits, uint32_t dataBits) {
@@ -72,7 +71,7 @@ void rxWriteAll(uint8_t addressBits, uint32_t dataBits) {
   RXSPI.beginTransaction(SPISettings(20000000, LSBFIRST, SPI_MODE0));
   for(int i = 0; i < MAX_NUM_RECEIVERS; i++) {
     digitalWrite(CS_PINS[i], LOW);
-    delay(5);
+    
   }
 
   RXSPI.transferBits(data, NULL, 25);
@@ -84,8 +83,7 @@ void rxWriteAll(uint8_t addressBits, uint32_t dataBits) {
   delayMicroseconds(MIN_TUNE_TIME);
 
   RXSPI.endTransaction();
-    delay(5);
-
+    
 }
 
 void RXstandBy(uint8_t NodeAddr) {
