@@ -19,15 +19,15 @@
 
 #define LEDs -1
 
-//#define USE_NORMAL_BUTTONS
+#define USE_NORMAL_BUTTONS
   
-//#define BUTTON1 35
-//#define BUTTON2 0
+#define BUTTON1 35
+#define BUTTON2 0
 
 #define VRX_SCK 25
 #define VRX_MOSI 27
 
-#define CS1 33
+#define CS1 33   // Add 100k between CS pins and grount to get stable channel/band switching
 #define CS2 99
 #define CS3 99
 #define CS4 99
@@ -39,7 +39,7 @@
 #define ADC3 ADC1_CHANNEL_6
 #define ADC4 ADC1_CHANNEL_5
 #define ADC5 ADC1_CHANNEL_4
-#define ADC6 ADC1_CHANNEL_7 // switched with adc 4 due to xtal
+#define ADC6 ADC1_CHANNEL_2 // Switched to ADC1_CHANNEL_2 because ADC1_CHANNEL_7 was giving problems with BUTTON1 (on pin 35)
 
 #define ADC1_GPIO 36
 #define ADC2_GPIO 98
