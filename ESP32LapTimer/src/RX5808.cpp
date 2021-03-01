@@ -38,23 +38,24 @@
 
 static volatile uint8_t RXBand[MAX_NUM_RECEIVERS];
 static volatile uint8_t RXChannel[MAX_NUM_RECEIVERS];
+SPIClass RXSPI(HSPI);
 
 void InitSPI() {
-  SPI.begin(VRX_SCK, VRX_MISO, VRX_MOSI);
+  RXSPI.begin(VRX_SCK, VRX_MISO, VRX_MOSI);
   delay(200);
 }
 
 void rxWrite(uint8_t addressBits, uint32_t dataBits, uint8_t CSpin) {
 
   uint32_t data = addressBits | (1 << 4) | (dataBits << 5);
-  SPI.beginTransaction(SPISettings(1000000, LSBFIRST, SPI_MODE0));
+  RXSPI.beginTransaction(SPISettings(20000000, LSBFIRST, SPI_MODE0));
   digitalWrite(CSpin, LOW);
     delay(5);
-  SPI.transferBits(data, NULL, 25);
+  RXSPI.transferBits(data, NULL, 25);
 
   digitalWrite(CSpin, HIGH);
   delayMicroseconds(MIN_TUNE_TIME);
-  SPI.endTransaction();
+  RXSPI.endTransaction();
     delay(5);
 
 }
@@ -68,13 +69,13 @@ void rxWriteNode(uint8_t node, uint8_t addressBits, uint32_t dataBits) {
 void rxWriteAll(uint8_t addressBits, uint32_t dataBits) {
 
   uint32_t data = addressBits | (1 << 4) | (dataBits << 5);
-  SPI.beginTransaction(SPISettings(1000000, LSBFIRST, SPI_MODE0));
+  RXSPI.beginTransaction(SPISettings(20000000, LSBFIRST, SPI_MODE0));
   for(int i = 0; i < MAX_NUM_RECEIVERS; i++) {
     digitalWrite(CS_PINS[i], LOW);
     delay(5);
   }
 
-  SPI.transferBits(data, NULL, 25);
+  RXSPI.transferBits(data, NULL, 25);
 
   for(int i = 0; i < MAX_NUM_RECEIVERS; i++) {
     digitalWrite(CS_PINS[i], HIGH);
@@ -82,7 +83,7 @@ void rxWriteAll(uint8_t addressBits, uint32_t dataBits) {
 
   delayMicroseconds(MIN_TUNE_TIME);
 
-  SPI.endTransaction();
+  RXSPI.endTransaction();
     delay(5);
 
 }
