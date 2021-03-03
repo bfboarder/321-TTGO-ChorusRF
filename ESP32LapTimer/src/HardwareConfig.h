@@ -35,6 +35,7 @@
 
 /// If your setup doesn't use an OLED remove or comment the following line
 #define OLED
+#define TFT
 
 // Selects the wifi mode to operate in.
 // One of these must be uncommented.
