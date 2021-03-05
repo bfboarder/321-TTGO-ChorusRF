@@ -12,5 +12,5 @@ void tftSetup(void){
   tft.setRotation(1);	// landscape
   tft.fillScreen(TFT_BLACK);
   tft.setSwapBytes(true);   // Swap the colour byte order when rendering
-  tft.pushImage(0, 0, logoWidth, logoHeight, ttgoLogo);   // Draw the logo
+  tft.pushImage(0, 0, logoWidth, logoHeight, TTGOLogo);   // Draw the logo
 }
