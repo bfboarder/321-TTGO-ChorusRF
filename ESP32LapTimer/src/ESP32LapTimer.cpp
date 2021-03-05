@@ -29,6 +29,9 @@
 #ifdef OLED
 #include "OLED.h"
 #endif
+#ifdef TFT
+#include "tft.h"
+#endif
 #include "TimerWebServer.h"
 #include "Beeper.h"
 #include "Calibration.h"
@@ -86,6 +89,9 @@ void setup() {
 #endif
 #ifdef USE_BUTTONS
   newButtonSetup();
+#endif
+#ifdef TFT
+  tftSetup();
 #endif
 
   EepromSettings.setup();
