@@ -2,7 +2,10 @@
 # NOT WORKING!!!
 
 
+<img src="img/Logo.png" width="300">
+
 # TTGO-T-RaceTimer 
+
 
 This is an attempt to make AlessandroAU/Chorus32-ESP32LapTimer (https://github.com/AlessandroAU/Chorus32-ESP32LapTimer) work on a 
 TTGO T-Display and add/change some things.
