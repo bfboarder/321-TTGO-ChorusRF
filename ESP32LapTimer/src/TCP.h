@@ -15,8 +15,8 @@
  * You should have received a copy of the GNU General Public License
  * along with this program. If not, see <http://www.gnu.org/licenses/>.
  */
-#ifndef __TCP_H__
-#define __TCP_H__
+
+#pragma once
 
 #include "Output.h"
 
@@ -27,4 +27,3 @@ void IRAM_ATTR tcp_send_packet(void* output, uint8_t* buf, uint32_t size);
 void tcp_init(void* output);
 void IRAM_ATTR tcp_update(void* output);
 
-#endif // __TCP_H__

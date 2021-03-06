@@ -15,9 +15,8 @@
  * You should have received a copy of the GNU General Public License
  * along with this program. If not, see <http://www.gnu.org/licenses/>.
  */
-#ifndef __BLUETOOTH_H__
-#define __BLUETOOTH_H__
 
+#pragma once
 
 #include "BluetoothSerial.h"
 
@@ -29,4 +28,3 @@ void bluetooth_update(void* output);
 void bluetooth_send_packet(void* output, uint8_t* buf, uint32_t size);
 void bluetooth_init(void* output);
 
-#endif // __BLUETOOTH_H__

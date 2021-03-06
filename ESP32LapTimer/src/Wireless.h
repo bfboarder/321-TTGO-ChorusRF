@@ -15,8 +15,8 @@
  * You should have received a copy of the GNU General Public License
  * along with this program. If not, see <http://www.gnu.org/licenses/>.
  */
-#ifndef __WIRELESS_H__
-#define __WIRELESS_H__
+
+#pragma once
 
 void InitWifiAP();
 void handleDNSRequests();
@@ -28,4 +28,3 @@ bool isAirplaneModeOn();
 bool InitWifiClient();
 void InitWifi();
 
-#endif // __WIRELESS_H__

@@ -11,7 +11,7 @@ TTGO T-Display and add/change some things.
 
 ## Connections TTGO T-Display --> RX5808
 
-![alt text](img/schema.png)
+<img src="img/schema.png">
 
 - TTGO 3V       -->     RX5808 3.3V/5V (RX5808 works fine on 3.3V)
 - TTGO G        -->     RX5808 GND

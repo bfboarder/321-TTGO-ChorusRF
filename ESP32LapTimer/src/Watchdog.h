@@ -15,8 +15,7 @@
  * You should have received a copy of the GNU General Public License
  * along with this program. If not, see <http://www.gnu.org/licenses/>.
  */
-#ifndef __WATCHDOG_H__
-#define __WATCHDOG_H__
+#pragma once
 
 #ifdef __cplusplus
 extern "C" {
@@ -29,6 +28,3 @@ void watchdog_feed();
 #ifdef __cplusplus
 }
 #endif
-
-
-#endif // __WATCHDOG_H__

@@ -15,8 +15,8 @@
  * You should have received a copy of the GNU General Public License
  * along with this program. If not, see <http://www.gnu.org/licenses/>.
  */
-#ifndef __UDP_H__
-#define __UDP_H__
+
+#pragma once
 
 #include "Output.h"
 
@@ -26,5 +26,3 @@
 void IRAM_ATTR udp_send_packet(void* output, uint8_t* buf, uint32_t size);
 void udp_init(void* output);
 void IRAM_ATTR udp_update(void* output);
-
-#endif // __UDP_H__

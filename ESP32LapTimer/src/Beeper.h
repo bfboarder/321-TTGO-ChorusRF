@@ -15,13 +15,10 @@
  * You should have received a copy of the GNU General Public License
  * along with this program. If not, see <http://www.gnu.org/licenses/>.
  */
-#ifndef __BEEPER_H__
-#define __BEEPER_H__
+#pragma once
 
 void beep();
 void doubleBeep();
 void chirps();
 void fiveBeep();
 void beeperUpdate();
-
-#endif // __BEEPER_H__
