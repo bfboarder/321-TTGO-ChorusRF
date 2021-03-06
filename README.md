@@ -27,3 +27,4 @@ TTGO T-Display and add/change some things.
 - Make solo pilot version (like original Chorus RF(https://github.com/voroshkov/Chorus-RF-Laptimer))
 - Link multiple solo timers to do a multi pilot race
 - Design PCB for solo linkable timer
+- Restructure code so I can read it........
