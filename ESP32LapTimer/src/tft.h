@@ -1,7 +1,3 @@
-#ifndef __TFT_H__
-#define __TFT_H__
-
+#pragma once
 
 void tftSetup();
-
-#endif

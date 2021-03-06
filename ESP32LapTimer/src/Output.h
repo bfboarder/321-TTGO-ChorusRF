@@ -15,8 +15,8 @@
  * You should have received a copy of the GNU General Public License
  * along with this program. If not, see <http://www.gnu.org/licenses/>.
  */
-#ifndef __OUTPUT_H__
-#define __OUTPUT_H__
+
+#pragma once
 
 #include <stdint.h>
 #include <Arduino.h>
@@ -46,5 +46,3 @@ void init_outputs();
 
 void output_input_callback(uint8_t* buf, uint32_t size);
 
-
-#endif // __OUTPUT_H__

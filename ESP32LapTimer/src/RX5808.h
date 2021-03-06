@@ -15,8 +15,8 @@
  * You should have received a copy of the GNU General Public License
  * along with this program. If not, see <http://www.gnu.org/licenses/>.
  */
-#ifndef HEADER_RX5808
-#define HEADER_RX5808
+
+#pragma once
 
 #include <stdint.h>
 
@@ -81,5 +81,3 @@ void setRXChannel(uint8_t node, uint8_t channel);
 uint8_t getRXChannel(uint8_t node);
 
 uint16_t getFrequencyFromBandChannel(uint8_t band, uint8_t channel);
-
-#endif

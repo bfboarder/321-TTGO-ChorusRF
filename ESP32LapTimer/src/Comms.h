@@ -15,8 +15,8 @@
  * You should have received a copy of the GNU General Public License
  * along with this program. If not, see <http://www.gnu.org/licenses/>.
  */
-#ifndef __COMMS_H__
-#define __COMMS_H__
+
+#pragma once
 
 #include "HardwareConfig.h"
 
@@ -32,4 +32,3 @@ void thresholdModeStep();
 void handleSerialControlInput(char *controlData, uint8_t  ControlByte, uint8_t NodeAddr, uint8_t length);
 bool isInRaceMode();
 
-#endif // __COMMS_H__

@@ -15,13 +15,10 @@
  * You should have received a copy of the GNU General Public License
  * along with this program. If not, see <http://www.gnu.org/licenses/>.
  */
-#ifndef __SERIAL_H__
-#define __SERIAL_H__
+#pragma once
 
 #include <stdint.h>
 
 void serial_init(void* output);
 void serial_update(void* output);
 void serial_send_packet(void* output, uint8_t* buf, uint32_t size);
-
-#endif // __SERIAL_H__

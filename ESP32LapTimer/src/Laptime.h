@@ -15,8 +15,8 @@
  * You should have received a copy of the GNU General Public License
  * along with this program. If not, see <http://www.gnu.org/licenses/>.
  */
-#ifndef __LAPTIME_H__
-#define __LAPTIME_H__
+
+#pragma once
 
 #include <stdint.h>
 
@@ -41,5 +41,3 @@ uint8_t getCurrentLap(uint8_t receiver);
 
 /// Sends unsent laps to the output queue
 void sendNewLaps();
-
-#endif // __LAPTIME_H__

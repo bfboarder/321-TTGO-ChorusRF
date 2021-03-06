@@ -15,12 +15,9 @@
  * You should have received a copy of the GNU General Public License
  * along with this program. If not, see <http://www.gnu.org/licenses/>.
  */
-#ifndef __CALIBRATION_H__
-#define __CALIBRATION_H__
+#pragma once
 
 bool isCalibrating();
 void rssiCalibration();
 void rssiCalibrationUpdate();
 int getcalibrationFreqIndex();
-
-#endif // __CALIBRATION_H__

@@ -15,8 +15,8 @@
  * You should have received a copy of the GNU General Public License
  * along with this program. If not, see <http://www.gnu.org/licenses/>.
  */
-#ifndef CRC_H
-#define CRC_H
+
+#pragma once
 
 #include <stdlib.h>
 #include <stdint.h>
@@ -80,5 +80,3 @@ static inline crc_t crc_finalize(crc_t crc)
 #ifdef __cplusplus
 }           /* closing brace for extern "C" */
 #endif
-
-#endif      /* CRC_H */

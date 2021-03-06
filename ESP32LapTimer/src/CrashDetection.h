@@ -15,8 +15,8 @@
  * You should have received a copy of the GNU General Public License
  * along with this program. If not, see <http://www.gnu.org/licenses/>.
  */
-#ifndef _CRASHDETECTION_H_
-#define _CRASHDETECTION_H_
+
+#pragma once
 
 #define MAX_CRASH_COUNT 5
 
@@ -25,5 +25,3 @@ void init_crash_detection();
 void restart_esp();
 int get_crash_count();
 void reset_crash_count();
-
-#endif  // _CRASHDETECTION_H_

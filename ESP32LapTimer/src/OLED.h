@@ -15,8 +15,8 @@
  * You should have received a copy of the GNU General Public License
  * along with this program. If not, see <http://www.gnu.org/licenses/>.
  */
-#ifndef __OLED_H__
-#define __OLED_H__
+
+#pragma once
 
 #include <stdint.h>
 
@@ -53,5 +53,3 @@ void airplane_page_input(void* data, uint8_t index, uint8_t type);
 void oledInjectInput(uint8_t index, uint8_t type);
 void next_page_input(void* data, uint8_t index, uint8_t type);
 
-
-#endif // __OLED_H__

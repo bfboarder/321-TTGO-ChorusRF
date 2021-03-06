@@ -15,8 +15,8 @@
  * You should have received a copy of the GNU General Public License
  * along with this program. If not, see <http://www.gnu.org/licenses/>.
  */
-#ifndef FONT_h
-#define FONT_h
+
+#pragma once
 
 // Created by http://oleddisplay.squix.ch/ Consider a donation
 // In case of problems make sure that you are using the font file with the correct version! 
@@ -476,4 +476,3 @@ const uint8_t Dialog_plain_9[] PROGMEM = {
   0x00,0x00,0xFE,0x07,0x10,0x01,0x10,0x01,0xE0, // 254
   0x30,0x04,0xC4,0x04,0x00,0x03,0xC4,0x00,0x30  // 255
 };
-#endif
