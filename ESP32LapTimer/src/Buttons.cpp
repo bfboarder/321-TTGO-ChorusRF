@@ -1,20 +1,11 @@
 /*
- * This file is part of Chorus32-ESP32LapTimer 
- * (see https://github.com/AlessandroAU/Chorus32-ESP32LapTimer).
+ * This file is part of TTGO-T-RaceTimer (https://github.com/bfboarder/321-TTGO-ChorusRF)
  *
  * This program is free software: you can redistribute it and/or modify
  * it under the terms of the GNU General Public License as published by
- * the Free Software Foundation, either version 3 of the License, or
- * (at your option) any later version.
- *
- * This program is distributed in the hope that it will be useful,
- * but WITHOUT ANY WARRANTY; without even the implied warranty of
- * MERCHANTABILITY or FITNESS FOR A PARTICULAR PURPOSE.  See the
- * GNU General Public License for more details.
- *
- * You should have received a copy of the GNU General Public License
- * along with this program. If not, see <http://www.gnu.org/licenses/>.
+ * the Free Software Foundation.
  */
+
 #include "HardwareConfig.h"
 #ifdef USE_BUTTONS
 #include "Buttons.h"
@@ -43,7 +34,7 @@ static long buttonTimer2 = 0;
 static long touchedTime1 = 0;
 static long touchedTime2 = 0;
 
-// These are for the value of the capacitive touch. 
+// These are for the value of the capacitive touch.
 static uint8_t touch1;
 static uint8_t touch2;
 
@@ -55,7 +46,8 @@ static bool buttonActive2 = false;
 static bool longPressActive2 = false;
 static bool buttonPressed2 = false;
 
-void newButtonSetup() {
+void newButtonSetup()
+{
 #ifdef USE_NORMAL_BUTTONS
   pinMode(BUTTON1, INPUT_PULLUP);
   pinMode(BUTTON2, INPUT_PULLUP);
@@ -67,7 +59,8 @@ void newButtonSetup() {
 #endif
 }
 
-void newButtonUpdate() {
+void newButtonUpdate()
+{
 #ifdef USE_NORMAL_BUTTONS
   touch1 = (digitalRead(BUTTON1)) ? 100 : 0;
   touch2 = (digitalRead(BUTTON2)) ? 100 : 0;
@@ -77,51 +70,72 @@ void newButtonUpdate() {
 #endif
 
   // BUTTON 1 Debounce logic here. Basically, we only read a button touch if
-  // it stays below threshold for newButtonDebounce, it gets flagged as "pressed". 
-  if (buttonOneTouched == false && touch1 < 70) {
+  // it stays below threshold for newButtonDebounce, it gets flagged as "pressed".
+  if (buttonOneTouched == false && touch1 < 70)
+  {
     touchedTime1 = millis();
     buttonOneTouched = true;
-  } else if (buttonOneTouched == true && touch1 < 70) {
-    if ( millis() - touchedTime1 >= newButtonDeBounce) {
+  }
+  else if (buttonOneTouched == true && touch1 < 70)
+  {
+    if (millis() - touchedTime1 >= newButtonDeBounce)
+    {
       buttonPressed1 = true;
     }
-  } else if (touch1 > 50) {
+  }
+  else if (touch1 > 50)
+  {
     buttonOneTouched = false;
     buttonPressed1 = false;
   }
 
   // BUTTON 2 Debounce logic here. Basically, we only read a button touch if
-  // it stays below threshol for newButtonDebounce, it gets flagged as "pressed". 
-  if (buttonTwoTouched == false && touch2 < 70) {
+  // it stays below threshol for newButtonDebounce, it gets flagged as "pressed".
+  if (buttonTwoTouched == false && touch2 < 70)
+  {
     touchedTime2 = millis();
     buttonTwoTouched = true;
-  } else if (buttonTwoTouched == true && touch2 < 70) {
-    if ( millis() - touchedTime2 >= newButtonDeBounce) {
+  }
+  else if (buttonTwoTouched == true && touch2 < 70)
+  {
+    if (millis() - touchedTime2 >= newButtonDeBounce)
+    {
       buttonPressed2 = true;
     }
-  } else if (touch2 > 50) {
+  }
+  else if (touch2 > 50)
+  {
     buttonTwoTouched = false;
     buttonPressed2 = false;
   }
 
   // BUTTON 1 Logic Here
-  if (buttonPressed1) {
-    if (buttonActive1 == false) {
+  if (buttonPressed1)
+  {
+    if (buttonActive1 == false)
+    {
       buttonActive1 = true;
       buttonTimer1 = millis();
     }
-    if ((millis() - buttonTimer1 > buttonLongPressTime) && (longPressActive1 == false)) {
+    if ((millis() - buttonTimer1 > buttonLongPressTime) && (longPressActive1 == false))
+    {
       Serial.println("Button 1 Long Press.");
       // vvv BUTTON 1 LONG press between these comments vvv
       oledInjectInput(0, BUTTON_LONG);
       // ^^^ BUTTON 1 LONG press between these comments ^^^
       longPressActive1 = true;
     }
-  } else {
-    if (buttonActive1 == true) {
-      if (longPressActive1 == true) {
+  }
+  else
+  {
+    if (buttonActive1 == true)
+    {
+      if (longPressActive1 == true)
+      {
         longPressActive1 = false;
-      } else {
+      }
+      else
+      {
         Serial.println("Button 1 Short press.");
         // vvv BUTTON 1 SHORT press between these comments vvv
         oledInjectInput(0, BUTTON_SHORT);
@@ -132,25 +146,34 @@ void newButtonUpdate() {
   }
 
   // BUTTON 2 Logic here
-  if (buttonPressed2) {
-    if (buttonActive2 == false) {
+  if (buttonPressed2)
+  {
+    if (buttonActive2 == false)
+    {
       buttonActive2 = true;
       buttonTimer2 = millis();
     }
-    if ((millis() - buttonTimer2 > buttonLongPressTime) && (longPressActive2 == false)) {
+    if ((millis() - buttonTimer2 > buttonLongPressTime) && (longPressActive2 == false))
+    {
       Serial.println("Button 2 Long Press.");
       // vvv BUTTON 2 LONG press between these comments vvv
 
-     oledInjectInput(1, BUTTON_LONG);
+      oledInjectInput(1, BUTTON_LONG);
 
       // ^^^ BUTTON 2 LONG press between these comments ^^^
       longPressActive2 = true;
     }
-  } else {
-    if (buttonActive2 == true) {
-      if (longPressActive2 == true) {
+  }
+  else
+  {
+    if (buttonActive2 == true)
+    {
+      if (longPressActive2 == true)
+      {
         longPressActive2 = false;
-      } else {
+      }
+      else
+      {
         Serial.println("Button 2 Short press.");
         // vvv BUTTON 2 SHORT press between these comments vvv
         oledInjectInput(1, BUTTON_SHORT);
@@ -160,7 +183,8 @@ void newButtonUpdate() {
     }
   }
 
-  if (longPressActive1 && longPressActive2) {
+  if (longPressActive1 && longPressActive2)
+  {
     // Long press on both buttons gets you here
     delay(200);
     chirps();
