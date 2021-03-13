@@ -25,6 +25,6 @@ TTGO T-Display and add/change some things.
 - TTGO T-Display support
 - Color TFT support
 - Make solo pilot version (like original Chorus RF(https://github.com/voroshkov/Chorus-RF-Laptimer))
-- Link multiple solo timers to do a multi pilot race
+- Link multiple solo timers to do a multi pilot race (max 3)
 - Design PCB for solo linkable timer
 - Restructure code so I can read it........
