@@ -20,14 +20,14 @@
 #define LEDs -1
 
 #define USE_NORMAL_BUTTONS
-  
+
 #define BUTTON1 35
 #define BUTTON2 0
 
 #define VRX_SCK 25
 #define VRX_MOSI 27
 
-#define CS1 2   // Add 100k between CS pins and grount to get stable channel/band switching
+#define CS1 2
 #define CS2 17
 #define CS3 15
 #define CS4 -1
