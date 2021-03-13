@@ -79,4 +79,4 @@
 #include "targets/target.h" // Needs to be at the bottom
 
 void InitHardwarePins();
-extern uint8_t CS_PINS[MAX_NUM_RECEIVERS];
+extern int8_t CS_PINS[MAX_NUM_RECEIVERS];

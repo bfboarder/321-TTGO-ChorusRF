@@ -20,7 +20,7 @@
 
 #include <Arduino.h>
 
-uint8_t CS_PINS[MAX_NUM_RECEIVERS] = {CS1, CS2, CS3, CS4, CS5, CS6};
+int8_t CS_PINS[MAX_NUM_RECEIVERS] = {CS1, CS2, CS3, CS4, CS5, CS6};
 
 void InitHardwarePins() {
 
