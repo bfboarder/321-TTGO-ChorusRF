@@ -20,10 +20,7 @@
 #include <stdint.h>
 
 /// These are all the available targets
-#define BOARD_DEFAULT 1
-#define BOARD_OLD 2
-#define BOARD_TTGO_LORA 3
-#define BOARD_WROOM 4
+#define BOARD_TTGO_T 1
 
 ///Define the board used here
 ///For jye's PCB v2.x the value doesn't need to be changed
@@ -42,7 +39,7 @@
 //
 #define WIFI_MODE_ACCESSPOINT
 // For now the AP name needs to be defined regardless of mode.
-#define WIFI_AP_NAME "Chorus32 LapTimer"
+#define WIFI_AP_NAME "TTGO-RaceTimer"
 
 // When in client mode you also need to specify the
 // ssid and password.

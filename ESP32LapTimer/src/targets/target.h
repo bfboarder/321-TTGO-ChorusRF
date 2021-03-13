@@ -15,15 +15,7 @@
  * You should have received a copy of the GNU General Public License
  * along with this program. If not, see <http://www.gnu.org/licenses/>.
  */
-#if BOARD==BOARD_DEFAULT
-  #include "config_default.h"
-#elif BOARD==BOARD_OLD
-  #include "config_old.h"
-#elif BOARD==BOARD_TTGO_LORA
-  #include "config_ttgo_lora_v1.h"
-#elif BOARD==BOARD_WROOM
-  #include "config_wroom.h"
-#elif BOARD==BOARD_TTGO_T
+#if BOARD==BOARD_TTGO_T
   #include "config_ttgo_t-display.h"
 #else
   #error "Unknown board!"
