@@ -17,7 +17,7 @@ TTGO T-Display and add/change some things.
 - TTGO G        -->     RX5808 GND
 - TTGO 27       -->     RX5808 CH1
 - TTGO 25       -->     RX5808 CH3
-- TTGO 33       -->     RX5808 CH2 (100K resistor between CH2 and Ground to make switching band/chanel stable)
+- TTGO 2        -->     RX5808 CH2 
 - TTGO 36       -->     RX5808 RSSI
 
 ## Things to do
