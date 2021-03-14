@@ -2,7 +2,7 @@
 # NOT WORKING!!!
 
 
-<img src="img/Logo.png" width="500">
+<img src="img/Logo.png" width="300">
 
 # TTGO-T-RaceTimer 
 
