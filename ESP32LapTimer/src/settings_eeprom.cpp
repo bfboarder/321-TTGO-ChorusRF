@@ -151,7 +151,7 @@ void EepromSettingsStruct::defaults() {
   settings.ADCVBATmode = INA219;
   settings.RXADCfilter = LPF_20Hz;
   settings.VBATcalibration = 1;
-  settings.NumReceivers = 6;
+  settings.NumReceivers = 3;
   settings.WiFiProtocol = 1;
   settings.WiFiChannel = 1;
 
