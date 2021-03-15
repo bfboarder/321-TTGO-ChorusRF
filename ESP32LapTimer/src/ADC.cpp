@@ -45,7 +45,7 @@ static float VBATcalibration;
 static float mAReadingFloat;
 static float VbatReadingFloat;
 
-static adc1_channel_t ADC_PINS[MAX_NUM_RECEIVERS] = {ADC1, ADC2, ADC3, ADC4, ADC5, ADC6};
+static adc1_channel_t ADC_PINS[MAX_NUM_RECEIVERS] = {ADC1, ADC2, ADC3};
 
 static uint16_t multisample_adc1(adc1_channel_t channel, uint8_t samples)
 {
