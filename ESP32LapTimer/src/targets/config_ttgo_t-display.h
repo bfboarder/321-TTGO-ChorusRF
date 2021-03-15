@@ -47,3 +47,7 @@
 #define ADC4_GPIO -1
 #define ADC5_GPIO -1
 #define ADC6_GPIO -1
+
+/// If your setup doesn't use an OLED remove or comment the following line
+//#define OLED
+#define TFT
